@@ -1,30 +1,30 @@
 import React from 'react';
 import ToggleSwitch from './ToggleSwitch';
+import { NavLink } from 'react-router-dom'
 
 function Navigation({ checked, handleTheme }) {
-
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light shadow">
-                <a className="navbar-brand" href="/">
-                    <img className="mx-5"
+            <nav className={`navbar navbar-expand-lg navbar-light shadow sticky-top ${!checked ? 'bg-white': 'bg-primary' }`}>
+                <NavLink className="navbar-brand" to="/">
+                    <img className=""
                         src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
                         alt="Pawel_Jaskolski" style={{ height: "65px", width: "auto" }} />
-                </a>
-                <ToggleSwitch checked={checked} handleTheme={handleTheme} />
+                </NavLink>
+                <ToggleSwitch checked={checked} handleTheme={handleTheme} className="mx-auto"/>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav font-weight-light mx-auto" style={{ fontSize: "1.2rem" }}>
+                    <ul className="navbar-nav font-weight-light mx-auto" style={{ fontSize: "1.2rem" }}>
                         <li className="nav-item">
-                            <a className="nav-link nav-text mx-5" href="/">Home</a>
+                            <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-text mx-5" href="/projects">Projects</a>
+                            <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/projects">Projects</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-text mx-5" href="/contact">Contact</a>
+                            <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/contact">Contact</NavLink>
                         </li>
                     </ul>
                 </div>

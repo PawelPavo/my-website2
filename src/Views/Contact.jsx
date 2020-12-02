@@ -1,15 +1,15 @@
 import React from 'react';
 
-function Home() {
+function Contact() {
 
 
     return (
         <>
             <div className="min-vh-100 d-flex justify-content-center">
-                <h1 className="display-1">Hello!</h1>
+                <h1 className="display-1">Contact!</h1>
             </div>
         </>
     );
 }
 
-export default Home;
+export default Contact;
