@@ -11,7 +11,7 @@ function Home({ checked }) {
 
     return (
         <>
-            <div className="min-vh-100 row justify-content-center">
+            <div className="container">
                 <TitleText>
                     <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Contact</div>
                 </TitleText>

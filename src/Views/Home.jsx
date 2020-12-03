@@ -7,7 +7,7 @@ function Home(props) {
 
     return (
         <>
-            <div className="min-vh-100 row justify-content-center">
+            <div className="container">
                 <TitleText>
                     <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>Home</div>
                 </TitleText>

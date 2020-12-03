@@ -18,8 +18,6 @@ function App() {
     setChecked(checked)
   }
 
-  console.log(window.location.pathname)
-
   return (
     <>
       <BrowserRouter>
