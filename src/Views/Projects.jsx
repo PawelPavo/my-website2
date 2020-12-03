@@ -1,6 +1,9 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import styled from 'styled-components';
+import { IconContext } from "react-icons"
+import { FaNodeJs } from "react-icons/fa"
+import { SiJavascript, SiBootstrap, SiTypescript, SiReact, SiTailwindcss, SiMysql, SiCsswizardry, SiHtml5, SiGithub } from "react-icons/si"
 
 
 const ProjectsArray = [
@@ -71,7 +74,23 @@ function Projects({ checked }) {
                         <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
                     </TitleText>
                 </div>
+                <IconsStyle>
+                    <div className="row justify-content-around my-5 drop-shadow-2">
+                        <IconContext.Provider value={{ style: { fontSize: '28px', opacity: "1" } }}>
+                            <span className="icon" style={{ color: '#cdb22f' }}><SiJavascript /></span>
+                            <span className="icon" style={{ color: '#57d3f5' }}><SiReact /></span>
+                            <span className="icon" style={{ color: '#007acc' }}><SiTypescript /></span>
+                            <span className="icon" style={{ color: '#7cc909' }}><FaNodeJs /></span>
+                            <span className="icon" style={{ color: '#404040' }}><SiGithub /></span>
+                            <span className="icon" style={{ color: '#563493' }}><SiBootstrap /></span>
+                            <span className="icon" style={{ color: '#03648a' }}><SiMysql /></span>
+                            <span className="icon" style={{ color: '#42a3ad' }}><SiTailwindcss /></span>
+                            <span className="icon" style={{ color: '#016db3' }}><SiCsswizardry /></span>
+                            <span className="icon" style={{ color: '#df4919' }}><SiHtml5 /></span>
 
+                        </IconContext.Provider>
+                    </div>
+                </IconsStyle>
                 <div className="row justify-content-center mt-5">
                     {ProjectsArray.map(project => (
                         <ProjectCard key={project.name} project={project} checked={checked} />
@@ -93,6 +112,24 @@ font-weight: bold;
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 2px;
+
+`
+const IconsStyle = styled.div`
+
+.drop-shadow-2 {
+    filter: drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
+}
+
+.icon {
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.icon:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.5));
+    opacity: 1;
+  }
 
 `
 
