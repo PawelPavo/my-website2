@@ -25,7 +25,7 @@ function App() {
               <Home />
             </Route>
             <Route exact path="/projects">
-              <Projects />
+              <Projects checked={checked}/>
             </Route>
             <Route exact path="/contact">
               <Contact />
