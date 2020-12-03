@@ -5,9 +5,9 @@ function Home() {
 
     return (
         <>
-            <div className="min-vh-100 d-flex justify-content-center">
-                <h1 className="display-1">Hello!</h1>
-            </div>
+                <div className="min-vh-100 row justify-content-center">
+                    <h1 className="display-4 my-5">Home</h1>
+                </div>
         </>
     );
 }

@@ -8,8 +8,8 @@ function Contact() {
         <>
             <Layout>
 
-                <div className="container justify-content-center">
-                    <h1 className="display-1">Contact!</h1>
+                <div className="min-vh-100 row justify-content-center">
+                    <h1 className="display-4 my-5">Contact</h1>
                 </div>
             </Layout>
         </>

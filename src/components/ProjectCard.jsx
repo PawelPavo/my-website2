@@ -13,7 +13,7 @@ const ProjectCard = (props) => {
                     <div className="card-body" >
                         <div className="row justify-content-center">
                             <h4 className="mr-3">
-                                <a href={props.project.git} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
+                                <a href={props.project.git} target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                             </h4>
                             <h4 className="ml-3">
                                 <a href={null} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>

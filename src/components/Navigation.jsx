@@ -25,6 +25,9 @@ function Navigation({ checked, handleTheme }) {
                             <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/projects">Projects</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/about">About Me</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/contact">Contact</NavLink>
                         </li>
                     </ul>

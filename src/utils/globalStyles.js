@@ -6,6 +6,6 @@ export const GlobalStyles = createGlobalStyle`
         transition: 0.4s linear;
         background-color: ${({ theme }) => theme.backgroundColor};
         color: ${({ theme }) => theme.text};
-        
+        overflow-x: hidden;
     }
 `;
