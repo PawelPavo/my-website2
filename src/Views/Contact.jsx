@@ -19,7 +19,7 @@ function Home({ checked }) {
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-md-6">
                             <div className=" text-center border-0 rounded-0">
-                                <div className="border-0">
+                                <div className="border-0 mt-4">
                                     <IconStyle>
                                         <IconContext.Provider value={{ style: { fontSize: '75px', opacity: "1" } }}>
                                             <small className={`drop-shadow ${!checked ? 'text-yellow' : 'text-orange'}`}><GoLocation /></small>

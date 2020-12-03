@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Views/Home';
 import Projects from './Views/Projects';
 import Contact from './Views/Contact';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import AboutMe from './Views/AboutMe';
 
 
@@ -40,7 +40,7 @@ function App() {
               <Contact checked={checked} />
             </Route>
           </Switch>
-          <Footer checked={checked} />
+          {/* <Footer checked={checked} /> */}
         </ThemeProvider>
       </BrowserRouter>
     </>
