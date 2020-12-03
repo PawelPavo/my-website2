@@ -1,15 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Contact() {
 
 
     return (
         <>
-            <div className="min-vh-100 d-flex justify-content-center">
-                <h1 className="display-1">Contact!</h1>
-            </div>
+            <Layout>
+
+                <div className="container justify-content-center">
+                    <h1 className="display-1">Contact!</h1>
+                </div>
+            </Layout>
         </>
     );
 }
+
+const Layout = styled.div`
+
+
+`
 
 export default Contact;

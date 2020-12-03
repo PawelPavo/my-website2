@@ -5,5 +5,5 @@ export const lightTheme = {
 
 export const darkTheme = {
 	backgroundColor: '#394f60',
-	text: '#cdd6e0',
+	text: '#f6f8fa',
 };

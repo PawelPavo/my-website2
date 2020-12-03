@@ -1,5 +1,9 @@
 $theme-colors: (
-    'primary': #394f60
+    'primary': #394f60,
+    'primary-light': #4b6172,
+    'orange': #E36C4E,
+    'yellow' : #E3B572,
+    'off-white' : #f6f8fa
 );
 
 @import '~bootstrap/scss/bootstrap';

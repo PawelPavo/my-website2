@@ -5,33 +5,56 @@ const ProjectsArray = [
     {
         id: 1,
         name: "XoloBooks",
-        description: "A bookstore build with wix which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content.",
-        url: "https://www.xolobooks.com/"
+        description: "A bookstore build with wix which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content. It is deployed with wix.",
+        url: "https://www.xolobooks.com/",
+        git:"https://github.com/PawelPavo",
     },
     {
         id: 2,
-        name: "We Work With You",
-        description: "We care about our clients! We take the time to show you the ins and outs of your website so you have control over your online business. Of course we are always there to help if you need!",
+        name: "Wilton Drain Pro",
+        description: "This site is made with Create React App with TypeScript. It uses a combination of Bootstrap and Styled-Components. It does not have a backend because it is deployed with github pages with multi-route solution.",
+        url: "https://pawelpavo.github.io/WiltonDrainPro/#/WiltonDrainPro/",
+        git: "https://github.com/PawelPavo/WiltonDrainPro"
+
     },
     {
         id: 3,
-        name: "Responsive",
-        description: "With over 60% of website traffic coming from mobile devices, having a responsive website is a must! All our websites come mobile-ready to provide the best user experience.",
+        name: "Single Scroll Mock",
+        description: "This site is made with ReactJS, TypeScript without any routes. It is styled with Bootstrap, custom CSS and Styled-Components. It is made with anchor tag navigation. The site uses heroku for deploynment.",
+        url: "https://floating-retreat-73992.herokuapp.com/",
+        git: "https://github.com/PawelPavo/Portfolio-Infinite-Scroll"
+
     },
     {
         id: 4,
-        name: "SEO-Friendly",
-        description: "SEO (Search Engine Optimization) is an important part of digital marketing! While we provide ProjectsArray to optimize your web marketing, our websites come standard with SEO coding.",
+        name: "Stripe Payment",
+        description: "This part of the website is built with Stripe payment processing platform. It is connected to the server through NodeJS with Express. Frontend is build with custom CSS and Bootstrap.",
+        url: "https://mighty-fortress-59305.herokuapp.com/donate",
+        git: "https://github.com/PawelPavo/searchBar/blob/master/src/client/pages/Donate.tsx"
+
     },
     {
         id: 5,
-        name: "Web Managment",
-        description: "We make web management simple. Whether your business already has a website, or you’re taking your first steps toward doing business online.",
+        name: "Who Gives A Sock",
+        description: "This site is made for a NYC charity organization. It is build with ReactJS along with Booystrap. Backend is powered by NodeJS with Express with SQL database. Deployed with heroku.",
+        url: "https://floating-retreat-73992.herokuapp.com/",
+        git: "https://github.com/PawelPavo/Portfolio-Infinite-Scroll"
+
     },
     {
         id: 6,
-        name: "Grapihic Design",
-        description: "A picture is worth a thousand words. Make sure your customers understand every single one of them.",
+        name: "Splash Page Mock",
+        description: "This site is made with ReactJS, TypeScript without any routes. It is styled with Bootstrap, custom CSS and Styled-Components. It is made with anchor tag navigation. The site uses heroku for deploynment.",
+        url: "https://secret-ravine-28184.herokuapp.com/",
+        git: "https://github.com/PawelPavo/my-site-2"
+
+    },
+    {
+        id: 7,
+        name: "The Pathfinder",
+        description: "This is a game built in collaboration with another developer using ReacJS with Bootstrap and Styled-Components. It is a fully functional game deployed with github pages.",
+        url: "https://przekwas.github.io/help-pathfinder-pawel/",
+        git: "https://github.com/PawelPavo/ThePathfinder"
     },
 ];
 
@@ -42,7 +65,7 @@ function Projects({checked}) {
         <>
             <div className="container">
                 <div className="row justify-content-center">
-                    <h1 className="display-1">Projects!</h1>
+                    <h1 className="display-4 my-5">Projects!</h1>
                 </div>
 
                 <div className="row justify-content-center">
