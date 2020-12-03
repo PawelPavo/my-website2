@@ -1,15 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
 
-function Home() {
+
+function Home(props) {
 
 
     return (
         <>
-                <div className="min-vh-100 row justify-content-center">
-                    <h1 className="display-4 my-5">Home</h1>
-                </div>
+            <div className="min-vh-100 row justify-content-center">
+                <TitleText>
+                    <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>Home</div>
+                </TitleText>
+            </div>
         </>
     );
 }
+
+const TitleText = styled.div`
+transform: rotate(-90deg);
+display: inline-block;
+margin-top: 25%;
+position: fixed;
+font-size: 5rem;
+left: -5%;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+
+`
 
 export default Home;

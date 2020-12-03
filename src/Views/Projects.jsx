@@ -1,5 +1,7 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
+import styled from 'styled-components';
+
 
 const ProjectsArray = [
     {
@@ -7,7 +9,7 @@ const ProjectsArray = [
         name: "XoloBooks",
         description: "A bookstore build with wix which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content. It is deployed with wix.",
         url: "https://www.xolobooks.com/",
-        git:"https://github.com/PawelPavo",
+        git: "https://github.com/PawelPavo",
     },
     {
         id: 2,
@@ -58,24 +60,40 @@ const ProjectsArray = [
     },
 ];
 
-function Projects({checked}) {
+function Projects({ checked }) {
 
 
     return (
         <>
             <div className="container">
                 <div className="row justify-content-center">
-                    <h1 className="display-4 my-5">Projects!</h1>
+                    <TitleText>
+                        <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
+                    </TitleText>
                 </div>
 
-                <div className="row justify-content-center">
+                <div className="row justify-content-center mt-5">
                     {ProjectsArray.map(project => (
-                        <ProjectCard key={project.name} project={project} checked={checked}/>
+                        <ProjectCard key={project.name} project={project} checked={checked} />
                     ))}
                 </div>
             </div>
         </>
     );
 }
+
+const TitleText = styled.div`
+transform: rotate(-90deg);
+display: inline-block;
+margin-top: 25%;
+position: fixed;
+font-size: 5rem;
+left: -11%;
+font-weight: bold;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
+
+`
 
 export default Projects;

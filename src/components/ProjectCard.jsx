@@ -20,7 +20,7 @@ const ProjectCard = (props) => {
                             </h4>
                         </div>
                         <div className={`card-title text-center name-text ${!props.checked ? '' : ''}`}>{props.project.name}</div>
-                        <p className={`card-text text-center mb-3 ${!props.checked ? 'text-muted' : 'text-'}`}>{props.project.description}</p>
+                        <p className={`card-text text-center mb-3 ${!props.checked ? 'text-muted' : ''}`}>{props.project.description}</p>
                     </div>
                     <a
                         target="_blank" href={props.project.url} rel="noreferrer"

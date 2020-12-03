@@ -10,12 +10,16 @@ import Contact from './Views/Contact';
 import Footer from './components/Footer';
 import AboutMe from './Views/AboutMe';
 
+
 function App() {
   const [checked, setChecked] = React.useState(false)
   //Sets the theme of the site on toggle
   const handleTheme = async (checked) => {
     setChecked(checked)
   }
+
+  console.log(window.location.pathname)
+
   return (
     <>
       <BrowserRouter>
@@ -24,7 +28,7 @@ function App() {
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
             <Route exact path="/">
-              <Home />
+              <Home checked={checked} />
             </Route>
             <Route exact path="/projects">
               <Projects checked={checked} />
@@ -33,7 +37,7 @@ function App() {
               <AboutMe checked={checked} />
             </Route>
             <Route exact path="/contact">
-              <Contact />
+              <Contact checked={checked} />
             </Route>
           </Switch>
           <Footer checked={checked} />

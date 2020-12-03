@@ -8,7 +8,9 @@ function AboutMe(props) {
         <PageStyles>
             <div className="min-vh-100 container">
                 <div className="row justify-content-center">
-                    <h1 className="display-4 my-5">About Me</h1>
+                    <TitleText>
+                        <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>About Me</div>
+                    </TitleText>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-md-8 my-auto">
@@ -39,11 +41,25 @@ function AboutMe(props) {
     );
 }
 
-const PageStyles = styled.div `
+const PageStyles = styled.div`
 .drop-shadow {
     filter: drop-shadow(0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.5));
 }
+`
+
+const TitleText = styled.div`
+transform: rotate(-90deg);
+display: inline-block;
+margin-top: 25%;
+position: fixed;
+font-size: 5rem;
+left: -11%;
+font-weight: bold;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
 
 `
+
 
 export default AboutMe;
