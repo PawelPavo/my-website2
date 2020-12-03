@@ -22,7 +22,7 @@ display: inline-block;
 margin-top: 25%;
 position: fixed;
 font-size: 5rem;
-left: -5%;
+left: -4%;
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 2px;

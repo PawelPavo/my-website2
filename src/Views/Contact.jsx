@@ -34,13 +34,13 @@ function Home({ checked }) {
                                     <IconContext.Provider value={{ style: { fontSize: '30px', opacity: "1" } }}>
                                         <div className="row justify-content-center border border-bottom-0 border-left-0 border-right-0 py-3">
                                             <h2 className="mr-5 icon">
-                                                <a href="https://www.instagram.com/pifpavchio/" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiInstagram /></a>
+                                                <a href="https://www.instagram.com/pifpavchio/" rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiInstagram /></a>
                                             </h2>
                                             <h2 className="mx-5 icon">
-                                                <a href="mailto:pjpavo@gmail.com?subject=I found your website and now..." target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiMail /></a>
+                                                <a href="mailto:pjpavo@gmail.com?subject=I found your website and now..." rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiMail /></a>
                                             </h2>
                                             <h2 className="ml-5 icon">
-                                                <a href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><AiOutlineLinkedin /></a>
+                                                <a href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/" rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><AiOutlineLinkedin /></a>
                                             </h2>
                                         </div>
                                     </IconContext.Provider>
@@ -64,7 +64,7 @@ display: inline-block;
 margin-top: 25%;
 position: fixed;
 font-size: 5rem;
-left: -10%;
+left: -11%;
 font-weight: bold;
 font-weight: bold;
 text-transform: uppercase;

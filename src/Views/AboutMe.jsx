@@ -23,7 +23,7 @@ function AboutMe(props) {
                             <a
                                 className={`resume ${!props.checked ? 'text-yellow' : 'text-orange'}`}
                                 href="https://news-api.s3.us-east-2.amazonaws.com/Pawel+SoftDev+Resume+August+20+AWS.pdf"
-                                target="_blank">
+                                target="_blank" rel="noreferrer">
                                 My Resume
                             </a>
                         </p>
