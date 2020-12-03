@@ -19,11 +19,10 @@ const ProjectsArray = [
     },
     {
         id: 3,
-        name: "Single Scroll Mock",
-        description: "This site is made with ReactJS, TypeScript without any routes. It is styled with Bootstrap, custom CSS and Styled-Components. It is made with anchor tag navigation. The site uses heroku for deploynment.",
-        url: "https://floating-retreat-73992.herokuapp.com/",
-        git: "https://github.com/PawelPavo/Portfolio-Infinite-Scroll"
-
+        name: "The Pathfinder",
+        description: "This is a game built in collaboration with another developer using ReacJS with Bootstrap and Styled-Components. It is a fully functional game deployed with github pages.",
+        url: "https://przekwas.github.io/help-pathfinder-pawel/",
+        git: "https://github.com/PawelPavo/ThePathfinder"
     },
     {
         id: 4,
@@ -51,10 +50,11 @@ const ProjectsArray = [
     },
     {
         id: 7,
-        name: "The Pathfinder",
-        description: "This is a game built in collaboration with another developer using ReacJS with Bootstrap and Styled-Components. It is a fully functional game deployed with github pages.",
-        url: "https://przekwas.github.io/help-pathfinder-pawel/",
-        git: "https://github.com/PawelPavo/ThePathfinder"
+        name: "Single Scroll Mock",
+        description: "This site is made with ReactJS, TypeScript without any routes. It is styled with Bootstrap, custom CSS and Styled-Components. It is made with anchor tag navigation. The site uses heroku for deploynment.",
+        url: "https://floating-retreat-73992.herokuapp.com/",
+        git: "https://github.com/PawelPavo/Portfolio-Infinite-Scroll"
+
     },
 ];
 

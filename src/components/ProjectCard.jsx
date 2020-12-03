@@ -1,8 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components';
-import { CgArrowLongRight } from 'react-icons/cg'
 import { IconContext } from "react-icons"
-import { FiGithub, FiEye } from "react-icons/fi"
+import { FiGithub, FiEye, FiCamera } from "react-icons/fi"
 
 
 const ProjectCard = (props) => {
@@ -17,18 +16,18 @@ const ProjectCard = (props) => {
                                 <a href={props.project.git} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                             </h4>
                             <h4 className="ml-3">
-                                <a href={props.project.git} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiEye /></a>
+                                <a href={null} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
                             </h4>
                         </div>
-                        <div className="card-title text-center name-text">{props.project.name}</div>
-                        <p className="card-text text-center mb-3">{props.project.description}</p>
+                        <div className={`card-title text-center name-text ${!props.checked ? '' : ''}`}>{props.project.name}</div>
+                        <p className={`card-text text-center mb-3 ${!props.checked ? 'text-muted' : 'text-'}`}>{props.project.description}</p>
                     </div>
                     <a
                         target="_blank" href={props.project.url} rel="noreferrer"
                         className="text-center font-weight-light border px-3 py-2 border-bottom-0 border-right-0 bg-primary"
                         style={{ position: "absolute", bottom: "0", right: "0", borderBottomRightRadius: "23px" }}>
                         <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1" } }}>
-                            <small className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><CgArrowLongRight /></small>
+                            <small className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiEye /></small>
                         </IconContext.Provider>
                     </a>
                 </div>
@@ -50,7 +49,7 @@ const Layout2 = styled.div`
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    
+    border-bottom: solid 1px;
 }
 
 .card-hover:hover {
