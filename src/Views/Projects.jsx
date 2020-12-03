@@ -61,6 +61,14 @@ const ProjectsArray = [
         git: "https://github.com/PawelPavo/Portfolio-Infinite-Scroll"
 
     },
+    {
+        id: 8,
+        name: "Light/Dark Theme",
+        description: "This site is made with ReactJS, TypeScript with CRUD routes hooked to MySQL. It is styled with Bootstrap, custom CSS along with Light and Dark theme toggle.",
+        url: "https://damp-headland-11870.herokuapp.com/",
+        git: "https://github.com/PawelPavo/resume_site"
+
+    },
 ];
 
 function Projects({ checked }) {
