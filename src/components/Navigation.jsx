@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 function Navigation({ checked, handleTheme }) {
     return (
         <>
-            <nav className={`navbar navbar-expand-lg navbar-light shadow sticky-top ${!checked ? 'bg-off-white': 'bg-primary-light' }`}>
+            <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${!checked ? 'bg-off-white': 'bg-primary-light' }`}>
                 <NavLink className="navbar-brand" to="/">
                     <img className=""
                         src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
