@@ -28,8 +28,11 @@ function Navigation({ checked, handleTheme }) {
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav" style={{ fontFamily: "Ubuntu" }}>
-                        <li className="nav-item ">
+                        {/* <li className="nav-item ">
                             <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/">Home</NavLink>
+                        </li> */}
+                        <li className="nav-item">
+                            <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/projects">Projects</NavLink>

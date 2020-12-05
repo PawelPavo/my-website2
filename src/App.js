@@ -26,6 +26,11 @@ function App() {
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
             <Route exact path="/">
+              <div className="min-vh-100 d-flex justify-content-center align-items-center">
+                <h1 className="display-1">SUPP</h1>
+              </div>
+            </Route>
+            <Route exact path="/home">
               <Home checked={checked} />
             </Route>
             <Route exact path="/projects">
