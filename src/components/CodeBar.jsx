@@ -31,6 +31,8 @@ function CodeBar({checked}) {
 
 const IconsStyle = styled.div`
 
+
+
 .drop-shadow-2 {
     filter: drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
 }
@@ -53,7 +55,9 @@ const IconsStyle = styled.div`
     transform: scale(2);
     filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.5));
     opacity: 1;
-    
+
+
+
 }
 
 `

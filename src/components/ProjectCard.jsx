@@ -7,16 +7,25 @@ import { FaTools } from "react-icons/fa"
 
 
 const ProjectCard = (props) => {
-    function handleTechUsed() {
+    const handleTechUsed = () => {
         var node_list, techClass_list;
         node_list = document.querySelectorAll(`.${props.project.tech}`);
         for (techClass_list = 0; techClass_list < node_list.length; techClass_list++) {
             node_list[techClass_list].classList.toggle("newStyle");
         }
     }
+
+    // const removeTechUsed = () => {
+    //     var node_list, techClass_list;
+    //     node_list = document.querySelectorAll(`.${props.project.tech}`);
+    //     for (techClass_list = 0; techClass_list < node_list.length; techClass_list++) {
+    //         node_list[techClass_list].classList.remove("newStyle");
+    //     }
+    //   }
+
     return (
         <Layout2>
-            <div className="col-md-4 my-5 my-auto" style={{top: "75px"}}>
+            <div className="col-md-4 my-5 my-auto" style={{top: "95px"}}>
                 <div className={`card border mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                     style={{ width: "21rem", height: "17rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
                     <div className="card-body" >
@@ -26,7 +35,7 @@ const ProjectCard = (props) => {
                             </h4>
                             <h4 className="mx-3 icon">
                                 {/* IMAGE GOES HERE WITH THE MOD */}
-                                <a href={props.project.url} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
+                                <a target="_blank" rel="noreferrer"  href={props.project.url} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
                             </h4>
                             <h4 className="ml-3 icon">
 
@@ -51,7 +60,6 @@ const ProjectCard = (props) => {
 }
 
 const Layout2 = styled.div`
-
 
 .card-hover {
     transition: all .4s ease;
