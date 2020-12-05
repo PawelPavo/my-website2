@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
     }
     return (
         <Layout2>
-            <div className="col-md-4 my-5 my-auto" style={{top: "100px"}}>
+            <div className="col-md-4 my-5 my-auto" style={{top: "75px"}}>
                 <div className={`card border mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                     style={{ width: "21rem", height: "17rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
                     <div className="card-body" >
@@ -25,7 +25,8 @@ const ProjectCard = (props) => {
                                 <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                             </h4>
                             <h4 className="mx-3 icon">
-                                <a href={null} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
+                                {/* IMAGE GOES HERE WITH THE MOD */}
+                                <a href={props.project.url} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
                             </h4>
                             <h4 className="ml-3 icon">
 
