@@ -79,7 +79,7 @@ const Layout2 = styled.div`
 
 .card-hover:hover {
     transform: scale(1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0px 8px rgba(0, 0, 0, 0);
     opacity: 1;
   }
 
