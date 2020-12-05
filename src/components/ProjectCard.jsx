@@ -25,7 +25,7 @@ const ProjectCard = (props) => {
 
     return (
         <Layout2>
-            <div className="col-md-4 my-5 my-auto" style={{top: "95px"}}>
+            <div className="col-md-4 m-4 my-auto" style={{top: "95px"}}>
                 <div className={`card border mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                     style={{ width: "25rem", height: "20rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
                     <div className="card-body" >
