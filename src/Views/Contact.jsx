@@ -19,7 +19,7 @@ function Home({ checked }) {
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-md-6">
                             <div className=" text-center border-0 rounded-0">
-                                <div className="border-0 mt-4">
+                                <div className="border-0">
                                     <IconStyle>
                                         <IconContext.Provider value={{ style: { fontSize: '75px', opacity: "1" } }}>
                                             <small className={`drop-shadow ${!checked ? 'text-yellow' : 'text-orange'}`}><GoLocation /></small>
@@ -48,7 +48,7 @@ function Home({ checked }) {
 
                             </div>
                         </div>
-                        <div className="col-md-5 order-sm-first" style={{ marginTop: "5%", filter: "grayscale(100%)" }}>
+                        <div className="col-md-5 order-sm-first " style={{ marginTop: "5%", filter: "grayscale(100%)" }}>
                             <iframe width="100%" height="450px" className="" title="map" src="https://maps.google.com/maps?q=Fort&Lauderdalet=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder="0" allowFullScreen ></iframe>
                         </div>
                     </div>

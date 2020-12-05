@@ -26,7 +26,7 @@ const ProjectCard = (props) => {
     return (
         <Layout2>
             <div className="col-md-4 m-4 my-auto" style={{top: "95px"}}>
-                <div className={`card border mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
+                <div className={`card mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                     style={{ width: "25rem", height: "20rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
                     <div className="card-body" >
                         <div className="row justify-content-center">
@@ -47,7 +47,7 @@ const ProjectCard = (props) => {
                     </div>
                     <a
                         target="_blank" href={props.project.url} rel="noreferrer"
-                        className="text-center font-weight-light border px-3 py-2 border-bottom-0 border-right-0 bg-primary icon"
+                        className="text-center font-weight-light px-3 py-2 bg-gray icon"
                         style={{ position: "absolute", bottom: "0", right: "0", borderBottomRightRadius: "23px" }}>
                         <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1", filter: "drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5))" } }}>
                             <small className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiEye /></small>
