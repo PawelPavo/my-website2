@@ -64,9 +64,7 @@ const Layout2 = styled.div`
 .card-hover {
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.01);
 }
 
 .name-text {
@@ -78,8 +76,8 @@ const Layout2 = styled.div`
 }
 
 .card-hover:hover {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0px 8px rgba(0, 0, 0, 0);
+    transform: scale(1.05);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0px 8px rgba(0, 0, 0, 0.3);
     opacity: 1;
   }
 
