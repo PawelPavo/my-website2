@@ -48,7 +48,7 @@ display: inline-block;
 margin-top: 25%;
 position: fixed;
 font-size: 5rem;
-left: -4%;
+left: -5%;
 font-weight: bold;
 text-transform: uppercase;
 letter-spacing: 2px;

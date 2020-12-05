@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { IconContext } from "react-icons"
 import { AiOutlineQuestion, AiOutlineFieldTime } from "react-icons/ai"
 import { DiCode } from "react-icons/di"
+import { GiLoveInjection } from "react-icons/gi"
+
+
 
 
 function AboutMe(props) {
@@ -55,6 +58,17 @@ function AboutMe(props) {
                     <div className="col-md-4 text-center">
                         <IconContext.Provider value={{ style: { fontSize: '170px', opacity: "1" } }}>
                             <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineFieldTime /></small>
+                        </IconContext.Provider>
+                    </div>
+                </div>
+                <div className="row justify-content-center">
+                    <div className="col-md-8 my-auto text-justify">
+                        <p className={`${!props.checked ? 'text-muted' : ''}`}>Tech I am currently using includes:</p>
+                        
+                    </div>
+                    <div className="col-md-4 text-center order-sm-first">
+                        <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
+                            <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><GiLoveInjection /></small>
                         </IconContext.Provider>
                     </div>
                 </div>

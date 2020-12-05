@@ -9,7 +9,7 @@ function CodeBar({checked}) {
     return (
         <>
             <IconsStyle>
-                <div className={`row justify-content-around fixed-top p-3 ${!checked ? 'bg-white' : 'bg-primary'}`} style={{marginTop:"65px", zIndex:"1" }}>
+                <div className={`row justify-content-around fixed-top p-3 border ${!checked ? 'bg-white' : 'bg-primary'}`} style={{marginTop:"65px", zIndex:"1" }}>
                     <IconContext.Provider value={{ style: { fontSize: '28px', opacity: "1" } }}>
                         <span id="javascript" className="icon wilton pathfinder stripe singleScroll lightDark" style={{ color: '#cdb22f' }}><SiJavascript /></span>
                         <span id="react" className="icon wilton pathfinder stripe wgas spalshPage singleScroll lightDark xolobooks" style={{ color: '#57d3f5' }}><SiReact /></span>
@@ -30,9 +30,6 @@ function CodeBar({checked}) {
 }
 
 const IconsStyle = styled.div`
-
-
-
 .drop-shadow-2 {
     filter: drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5));
 }

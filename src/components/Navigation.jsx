@@ -16,14 +16,14 @@ function Navigation({ checked, handleTheme }) {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${!checked ? 'bg-off-white' : 'bg-primary-light'}`}>
+            <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${!checked ? 'bg-white' : 'bg-primary'}`}>
                 {/* <NavLink className="navbar-brand" to="/">
                     <img className=""
                         src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
                         alt="Pawel_Jaskolski" style={{ height: "65px", width: "auto" }} />
                 </NavLink> */}
                 <ToggleSwitch checked={checked} handleTheme={handleTheme} className="mx-auto" />
-                <button className={`navbar-toggler ${!checked ? '' : 'bg-white'}`} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button className={`navbar-toggler ${!checked ? 'bg-off-white' : 'bg-white'}`} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">

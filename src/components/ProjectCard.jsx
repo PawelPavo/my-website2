@@ -27,23 +27,23 @@ const ProjectCard = (props) => {
         <Layout2>
             <div className="col-md-4 my-5 my-auto" style={{top: "95px"}}>
                 <div className={`card border mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
-                    style={{ width: "21rem", height: "17rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
+                    style={{ width: "25rem", height: "20rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>
                     <div className="card-body" >
                         <div className="row justify-content-center">
-                            <h4 className="mr-3 icon">
+                            <h4 className="mr-4 icon">
                                 <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                             </h4>
-                            <h4 className="mx-3 icon">
+                            <h4 className="mx-4 icon">
                                 {/* IMAGE GOES HERE WITH THE MOD */}
                                 <a target="_blank" rel="noreferrer"  href={props.project.url} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
                             </h4>
-                            <h4 className="ml-3 icon">
+                            <h4 className="ml-4 icon">
 
                                 <div onClick={handleTechUsed} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FaTools /></div>
                             </h4>
                         </div>
-                        <div className={`card-title text-center name-text ${!props.checked ? '' : ''}`}>{props.project.name}</div>
-                        <p className={`card-text text-center mb-3 ${!props.checked ? 'text-muted' : ''}`}>{props.project.description}</p>
+                        <div className={`card-title text-center name-text mt-2 pb-2${!props.checked ? '' : ''}`}>{props.project.name}</div>
+                        <p className={`card-text text-center mt-3 ${!props.checked ? 'text-muted' : ''}`}>{props.project.description}</p>
                     </div>
                     <a
                         target="_blank" href={props.project.url} rel="noreferrer"
