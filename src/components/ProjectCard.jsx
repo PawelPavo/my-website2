@@ -3,29 +3,28 @@ import styled from 'styled-components';
 import { IconContext } from "react-icons"
 import { FiGithub, FiEye, FiCamera } from "react-icons/fi"
 import { FaTools } from "react-icons/fa"
-
+import Carousel, { Modal, ModalGateway } from 'react-images';
 
 
 const ProjectCard = (props) => {
-
-    const handleTechUsed = () => {
-        var node_list, techClass_list;
-        node_list = document.querySelectorAll(`.${props.project.tech}`);
-        for (techClass_list = 0; techClass_list < node_list.length; techClass_list++) {
-            node_list[techClass_list].classList.toggle("newStyle");
-        }
-    }
-
-    const [show2, setShow2] = React.useState(false);
-
-
-    // const removeTechUsed = () => {
+    
+    // const handleTechUsed = () => {
     //     var node_list, techClass_list;
     //     node_list = document.querySelectorAll(`.${props.project.tech}`);
     //     for (techClass_list = 0; techClass_list < node_list.length; techClass_list++) {
-    //         node_list[techClass_list].classList.remove("newStyle");
+    //         node_list[techClass_list].classList.toggle("newStyle");
     //     }
-    //   }
+    // }
+    // const images = [{ source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png' }, { source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png' }];
+    const [show2, setShow2] = React.useState(false);
+    const [modalOpen, setModalOpen] = React.useState(false)
+
+    const toggleModal = () => {
+        setModalOpen(true)
+    }
+    const toggleModalClose = () => {
+        setModalOpen(false)
+    }
 
     return (
         <Layout2>
@@ -37,7 +36,7 @@ const ProjectCard = (props) => {
                             <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                         </h4>
                         <h4 className="mx-4 icon">
-                            <a target="_blank" rel="noreferrer" href={props.project.url} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></a>
+                            <div onClick={toggleModal} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></div>
                         </h4>
                         <h4 className="ml-4 icon">
                             <div className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FaTools /></div>
@@ -52,7 +51,7 @@ const ProjectCard = (props) => {
                             <span className={`icon ${!props.checked ? 'text-primary' : 'text-yellow'}`} >Read more...</span>
                         </div>
                         <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
-                            <p className="card-text">{props.project.description}</p>
+                            <p className={`${!props.checked ? 'text-muted' : 'text-off-white'}`}>{props.project.description}</p>
                         </div>
                     </div>
                 </div>
@@ -65,6 +64,13 @@ const ProjectCard = (props) => {
                     </IconContext.Provider>
                 </a>
             </div>
+            <ModalGateway>
+                {modalOpen ? (
+                    <Modal onClose={toggleModalClose}>
+                        <Carousel views={props.project.images} />
+                    </Modal>
+                ) : null}
+            </ModalGateway>
         </Layout2>
     )
 }
