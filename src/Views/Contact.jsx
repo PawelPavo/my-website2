@@ -15,7 +15,7 @@ function Home({ checked }) {
                 <TitleText>
                     <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Contact</div>
                 </TitleText>
-                <div className="container mt-5">
+                <div className="container" style={{marginTop: "100px"}}>
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-md-6">
                             <div className=" text-center border-0 rounded-0">

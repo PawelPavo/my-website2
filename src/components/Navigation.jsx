@@ -2,8 +2,10 @@ import React from 'react';
 import ToggleSwitch from './ToggleSwitch';
 import GoogleFontLoader from 'react-google-font-loader';
 import { NavLink } from 'react-router-dom'
+import Burger from '../components/burger/Burger'
 
 function Navigation({ checked, handleTheme }) {
+    const [open, setOpen] = React.useState(false);
 
     return (
         <>
@@ -16,16 +18,16 @@ function Navigation({ checked, handleTheme }) {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <nav className={`navbar navbar-expand-lg navbar-light sticky-top ${!checked ? 'bg-white' : 'bg-primary'}`}>
+            <nav className={`navbar navbar-expand-lg navbar-light fixed-top py-4 ${!checked ? 'bg-white' : 'bg-primary'}`}>
                 {/* <NavLink className="navbar-brand" to="/">
                     <img className=""
                         src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
                         alt="Pawel_Jaskolski" style={{ height: "65px", width: "auto" }} />
                 </NavLink> */}
-                <ToggleSwitch checked={checked} handleTheme={handleTheme} className="mx-auto" />
-                <button className={`navbar-toggler ${!checked ? 'bg-off-white' : 'bg-white'}`} type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+                <div className="">
+                <ToggleSwitch checked={checked} handleTheme={handleTheme} className="" />
+                    <Burger className="" open={open} setOpen={setOpen} checked={checked} />
+                </div>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav" style={{ fontFamily: "Ubuntu" }}>
                         {/* <li className="nav-item ">

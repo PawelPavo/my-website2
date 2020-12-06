@@ -5,13 +5,10 @@ import { AiOutlineQuestion, AiOutlineFieldTime } from "react-icons/ai"
 import { DiCode } from "react-icons/di"
 import { GiLoveInjection } from "react-icons/gi"
 
-
-
-
 function AboutMe(props) {
     return (
         <PageStyles>
-            <div className="min-vh-100 container mb-5">
+            <div className="min-vh-100 container mb-5" style={{marginTop:"75px"}}>
                 <div className="row justify-content-center">
                     <TitleText>
                         <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>About Me</div>

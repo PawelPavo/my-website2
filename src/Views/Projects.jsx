@@ -1,7 +1,6 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import styled from 'styled-components';
-import CodeBar from '../components/CodeBar'
 
 const ProjectsArray = [
     {
@@ -92,10 +91,11 @@ function Projects({ checked }) {
                         <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
                     </TitleText>
                 </div>
-              <CodeBar checked={checked}/>
-                <div className="row justify-content-center" >
+                <div className="row mx-md-5" style={{ marginTop: "100px" }}>
                     {ProjectsArray.map(project => (
-                        <ProjectCard key={project.name} project={project} checked={checked} />
+                        <div key={project.name} className="col-lg-4" >
+                            <ProjectCard  project={project} checked={checked} />
+                        </div>
                     ))}
                 </div>
             </div>
