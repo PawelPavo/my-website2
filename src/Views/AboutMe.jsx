@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { IconContext } from "react-icons"
-import { AiOutlineQuestion, AiOutlineFieldTime } from "react-icons/ai"
+import { AiOutlineQuestion, AiOutlineTool } from "react-icons/ai"
 import { DiCode } from "react-icons/di"
-import { GiLoveInjection } from "react-icons/gi"
 
 function AboutMe(props) {
     return (
@@ -14,14 +13,14 @@ function AboutMe(props) {
                         <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>About Me</div>
                     </TitleText>
                 </div>
-                <div className="row justify-content-center mt-5">
-                    <div className="col-md-8 my-auto text-justify title">
-                        <p className={`${!props.checked ? 'text-muted' : ''}`}>
-                            Hello, My name is Pawel and I am a software developer with a background in healthcare administration. I was always interested in how the software works and the code behind it. I decided that I wanted to shift my focus onto a new career path and dedicated my time to becoming a software developer.
+                <div className="container">
+                    <div className="row justify-content-center mt-5">
+                        <div className="col-md-8 my-auto text-justify custom_effects">
+                            <p className={` slide-1 ${!props.checked ? 'text-muted' : ''}`}>
+                                Hello, My name is Pawel and I am a software developer with a background in healthcare administration. I was always interested in how the software works and the code behind it. I decided that I wanted to shift my focus onto a new career path and dedicated my time to becoming a software developer.
                                 </p>
-                        <div className="text-right">
-                            <div className="par">
-                                <p className="myh1">
+                            <div className="text-right">
+                                <p className="slide-2">
                                     <a
                                         className={`resume ${!props.checked ? 'text-yellow' : 'text-orange'}`}
                                         href="https://news-api.s3.us-east-2.amazonaws.com/Pawel+SoftDev+Resume+August+20+AWS.pdf"
@@ -31,47 +30,35 @@ function AboutMe(props) {
                                 </p>
                             </div>
                         </div>
+                        <div className="col-md-4 text-center container_img">
+                            <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
+                                <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><DiCode /></small>
+                            </IconContext.Provider>
+                        </div>
                     </div>
-                    <div className="col-md-4 text-center container_img">
-                        <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
-                            <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><DiCode /></small>
-                        </IconContext.Provider>
+                    <div className="row justify-content-center mt-5">
+                        <div className="col-md-8 my-auto text-justify custom_effects">
+                            <p className={`slide-3 ${!props.checked ? 'text-muted' : ''}`}>
+                                I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve.
+                                </p>
+                        </div>
+                        <div className="col-md-4 text-center container_img order-md-first">
+                            <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
+                                <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineQuestion /></small>
+                            </IconContext.Provider>
+                        </div>
                     </div>
-                </div>
-
-                <div className="row justify-content-center">
-                    <div className="col-md-8 my-auto text-justify title">
-                        <p className={`title ${!props.checked ? 'text-muted' : ''}`}>
-                            I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve. Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.
-                        </p>
-                    </div>
-                    <div className="col-md-4 text-center order-sm-first container_img">
-                        <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
-                            <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineQuestion /></small>
-                        </IconContext.Provider>
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-md-8 my-auto text-justify">
-                        <p className={`${!props.checked ? 'text-muted' : ''}`}>
-                            In my free time, I enjoy researching and investing in the stock market, while maybe sipping on a Jai Alai, my favorite beer. And in the background, I’ll have a soccer match playing. I also enjoy going out to different restaurants trying to find the best fried calamari with my girlfriend, who created my awesome avatar … by the way!
-                        </p>
-                    </div>
-                    <div className="col-md-4 text-center container_img">
-                        <IconContext.Provider value={{ style: { fontSize: '170px', opacity: "1" } }}>
-                            <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineFieldTime /></small>
-                        </IconContext.Provider>
-                    </div>
-                </div>
-                <div className="row justify-content-center">
-                    <div className="col-md-8 my-auto text-justify">
-                        <p className={`${!props.checked ? 'text-muted' : ''}`}>Tech I am currently using includes:</p>
-
-                    </div>
-                    <div className="col-md-4 text-center order-sm-first container_img">
-                        <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
-                            <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><GiLoveInjection /></small>
-                        </IconContext.Provider>
+                    <div className="row justify-content-center mt-5">
+                        <div className="col-md-8 my-auto text-justify custom_effects">
+                            <p className={`slide-4 ${!props.checked ? 'text-muted' : ''}`}>
+                                Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.
+                                </p>
+                        </div>
+                        <div className="col-md-4 text-center container_img">
+                            <IconContext.Provider value={{ style: { fontSize: '175px', opacity: "1" } }}>
+                                <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineTool /></small>
+                            </IconContext.Provider>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,48 +74,35 @@ const PageStyles = styled.div`
 .resume {
     text-decoration: none;
 }
-
-.container_outer_img {
-  margin: 50px;
-  width: 50%;
-}   
     
+.custom_effects {
+  overflow: hidden;
+  height: auto;
+}
+
 .container_img {
   width: 100%;
-  animation: slideIn 1.5s ease-in-out forwards;
+  animation: slideIn 2s ease-in-out forwards;
 }
 
-.par {
-  height: auto;
-  overflow: hidden;
-}
-
-p {
+.slide-1 {
   transform: translateY(300px);
-  animation: slideUp .8s ease-in-out forwards .8s;
+  animation: slideUp .8s ease-in-out forwards .5s;
 }
 
-.btns {
-  height: 100%;
-  position: relative;
-  width: 150px;
-  overflow: hidden;
+.slide-2 {
+    transform: translateY(300px);
+    animation: slideUp .8s ease forwards 1s;
 }
 
-.btns_more {
-  position: relative;
-  transform: translateY(50px);
-  animation: slideUp .8s ease-in-out  forwards 1s;
+.slide-3 {
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards 1.5s;
 }
 
-.title {
-  overflow: hidden;
-  height: auto;
-}
-
-.myh1 {
-    transform: translateY(100px);
-    animation: slideUp .8s ease forwards .5s;
+.slide-4 {
+    transform: translateY(300px);
+    animation: slideUp .8s ease forwards 2s;
 }
 
 @keyframes slideIn {

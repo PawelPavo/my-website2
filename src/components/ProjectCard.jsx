@@ -29,21 +29,21 @@ const ProjectCard = (props) => {
     return (
         <Layout2>
 
-            <div className={` custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
+            <div className={`test container_img custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                 style={{ borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    <div className="card-body" >
-                    <div className="row justify-content-center">
-                        <h4 className="mr-4 icon">
+                    <div className="test row justify-content-center">
+                        <h4 className="mr-4 icon container_img-1">
                             <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                         </h4>
-                        <h4 className="mx-4 icon">
+                        <h4 className="mx-4 icon container_img-2">
                             <div onClick={toggleModal} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></div>
                         </h4>
-                        <h4 className="ml-4 icon">
+                        <h4 className="ml-4 icon container_img-3">
                             <div className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FaTools /></div>
                         </h4>
                     </div>
-                    <div className={`card-title text-center name-text mt-2${!props.checked ? '' : ''}`}>{props.project.name}</div>
-                    <div className="col-md-12" onClick={() => setShow2(!show2)} >
+                    <div className={`container_img-5 card-title text-center name-text mt-2${!props.checked ? '' : ''}`}>{props.project.name}</div>
+                    <div className=" container_img-6 col-md-12" onClick={() => setShow2(!show2)} >
                         <div className={`showContent ${!show2 ? 'showContent showContent-active' : ''} card-text ${!props.checked ? 'text-muted' : ''}`}>
                             <p>
                                 {props.project.description.substring(0, 60)}
@@ -76,23 +76,6 @@ const ProjectCard = (props) => {
 }
 
 const Layout2 = styled.div`
-/* .custom-height {
-
-@media (max-width: 1024px) {
-        min-height: 25rem;
-        min-width: auto;
-
-    }
-
-    @media (max-width: 1200px) {
-        min-height: 23rem;
-        min-width: 20rem,;
-
-    }
-} */
-
-
-
 .card-hover {
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -135,6 +118,54 @@ const Layout2 = styled.div`
     height: 175px;
     opacity: 1;
 
+}
+
+.test{
+  animation: blink 2s linear 1;
+}
+
+.container_img {
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+.container_img-2 {
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+.container_img-3 {
+  animation: slideUp 2s ease-in-out forwards;
+}
+
+.container_img-4 {
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+.container_img-5 {
+  animation: slideIn 2.5s ease-in-out forwards;
+}
+.container_img-6 {
+  animation: slideIn 3s ease-in-out forwards;
+}
+
+@keyframes blink{
+0%{opacity: 0.1;}
+50%{opacity: 0.5;}
+100%{opacity: 1;}
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
 }
 
 `
