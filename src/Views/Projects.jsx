@@ -9,7 +9,7 @@ const ProjectsArray = [
         description: "A bookstore build with wix which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content. It is deployed with wix.",
         url: "https://www.xolobooks.com/",
         git: "https://github.com/PawelPavo",
-        images: [{ source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png' }, { source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png' }]
+        images: [{ source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png' }]
     },
     {
         id: 2,
@@ -79,7 +79,7 @@ function Projects({ checked }) {
                         <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
                     </TitleText>
                 </div>
-                <div className="row mx-md-5" style={{ marginTop: "100px" }}>
+                <div className="row" style={{ marginTop: "150px" }}>
                     {ProjectsArray.map(project => (
                         <div key={project.name} className="col-lg-4" >
                             <ProjectCard  project={project} checked={checked} />

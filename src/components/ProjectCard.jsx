@@ -7,7 +7,7 @@ import Carousel, { Modal, ModalGateway } from 'react-images';
 
 
 const ProjectCard = (props) => {
-    
+
     // const handleTechUsed = () => {
     //     var node_list, techClass_list;
     //     node_list = document.querySelectorAll(`.${props.project.tech}`);
@@ -29,8 +29,8 @@ const ProjectCard = (props) => {
     return (
         <Layout2>
 
-            <div className={` custom-height card mb-5 card-hover rouded-0  ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
-                style={{ height: "19rem", borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    <div className="card-body" >
+            <div className={` custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
+                style={{ borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    <div className="card-body" >
                     <div className="row justify-content-center">
                         <h4 className="mr-4 icon">
                             <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
@@ -76,14 +76,22 @@ const ProjectCard = (props) => {
 }
 
 const Layout2 = styled.div`
-.custom-height {
+/* .custom-height {
 
 @media (max-width: 1024px) {
         min-height: 25rem;
         min-width: auto;
 
     }
-}
+
+    @media (max-width: 1200px) {
+        min-height: 23rem;
+        min-width: 20rem,;
+
+    }
+} */
+
+
 
 .card-hover {
     transition: all .4s ease;
@@ -124,8 +132,9 @@ const Layout2 = styled.div`
 }
 
 .showContent-active {
-    height: 150px;
+    height: 175px;
     opacity: 1;
+
 }
 
 `
