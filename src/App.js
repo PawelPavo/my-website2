@@ -1,9 +1,11 @@
 import React from 'react';
-import Navigation from './components/Navigation';
 import { GlobalStyles } from './utils/globalStyles'
 import { lightTheme, darkTheme } from './utils/themes';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import NavigationDesktop from './components/NavigationDesktop';
+
 import Home from './Views/Home';
 import Projects from './Views/Projects';
 import Contact from './Views/Contact';
@@ -17,12 +19,23 @@ function App() {
     setChecked(checked)
   }
 
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 1024;
+
+  React.useEffect(() => {
+      const handleWindowResize = () => setWidth(window.innerWidth);
+      window.addEventListener('resize', handleWindowResize);
+
+      return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
   return (
     <>
       <BrowserRouter>
         <ThemeProvider theme={!checked ? lightTheme : darkTheme} >
           <GlobalStyles />
-          <Navigation checked={checked} handleTheme={handleTheme} />
+          {width < breakpoint ? <Navigation checked={checked} handleTheme={handleTheme} /> : <NavigationDesktop checked={checked} handleTheme={handleTheme}/>}
+          {/* <Navigation checked={checked} handleTheme={handleTheme} /> */}
           <Switch>
             <Route exact path="/">
             </Route>
