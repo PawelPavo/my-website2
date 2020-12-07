@@ -29,7 +29,7 @@ const ProjectCard = (props) => {
     return (
         <Layout2>
 
-            <div className={`fade_effect  custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
+            <div className={`fade_effect  custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-off-white bg-off-white' : "bg-primary-light"}`}
                 style={{ borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    <div className="card-body" >
                     <div className="row justify-content-center">
                         <h4 className="mr-4 icon slide-1">
