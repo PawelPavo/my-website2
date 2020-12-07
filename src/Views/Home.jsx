@@ -28,11 +28,6 @@ function Home(props) {
                                 </div>
                             </div>
                         </div>
-                        <div className="container_outer_img">
-                            <div className="img-inner">
-                                <img src='https://images.unsplash.com/photo-1517911041065-4960862d38f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80' alt="" className="container_img" />
-                            </div>
-                        </div>
                     </div>
                     <div className="overlay"></div>
                 </div>
