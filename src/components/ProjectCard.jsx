@@ -29,26 +29,26 @@ const ProjectCard = (props) => {
     return (
         <Layout2>
 
-            <div className={`test container_img custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
+            <div className={`fade_effect  custom-height card mb-5 card-hover rouded-0 mx-autp ${!props.checked ? 'border-muted bg-off-white' : "bg-primary-light"}`}
                 style={{ borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    <div className="card-body" >
-                    <div className="test row justify-content-center">
-                        <h4 className="mr-4 icon container_img-1">
+                    <div className="row justify-content-center">
+                        <h4 className="mr-4 icon slide-1">
                             <a href={props.project.git} rel="noreferrer" target="_blank" className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiGithub /></a>
                         </h4>
-                        <h4 className="mx-4 icon container_img-2">
+                        <h4 className="mx-4 icon slide-2">
                             <div onClick={toggleModal} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></div>
                         </h4>
-                        <h4 className="ml-4 icon container_img-3">
+                        <h4 className="ml-4 icon slide-3">
                             <div className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FaTools /></div>
                         </h4>
                     </div>
-                    <div className={`container_img-5 card-title text-center name-text mt-2${!props.checked ? '' : ''}`}>{props.project.name}</div>
-                    <div className=" container_img-6 col-md-12" onClick={() => setShow2(!show2)} >
-                        <div className={`showContent ${!show2 ? 'showContent showContent-active' : ''} card-text ${!props.checked ? 'text-muted' : ''}`}>
+                    <div className={`slide-4 ard-title text-center name-text mt-2${!props.checked ? '' : ''}`}>{props.project.name}</div>
+                    <div className=" col-md-12" onClick={() => setShow2(!show2)} >
+                        <div className={` slide-5 showContent ${!show2 ? 'showContent showContent-active' : ''} card-text ${!props.checked ? 'text-muted' : ''}`}>
                             <p>
-                                {props.project.description.substring(0, 60)}
+                                {props.project.description.substring(0, 60)}...
                             </p>
-                            <span className={`icon ${!props.checked ? 'text-primary' : 'text-yellow'}`} >Read more...</span>
+                            <span className={`icon ${!props.checked ? 'text-primary' : 'text-yellow'}`} >Read more.</span>
                         </div>
                         <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
                             <p className={`${!props.checked ? 'text-muted' : 'text-off-white'}`}>{props.project.description}</p>
@@ -57,7 +57,7 @@ const ProjectCard = (props) => {
                 </div>
                 <a
                     target="_blank" href={props.project.url} rel="noreferrer"
-                    className="text-center font-weight-light px-3 py-2 bg-gray icon"
+                    className="text-center font-weight-light px-3 py-2 bg-gray icon slide-4"
                     style={{ position: "absolute", bottom: "0", right: "0", borderBottomRightRadius: "23px" }}>
                     <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1", filter: "drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5))" } }}>
                         <small className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiEye /></small>
@@ -120,34 +120,62 @@ const Layout2 = styled.div`
 
 }
 
-.test{
+.fade_effect{
   animation: blink 2s linear 1;
 }
 
-.container_img {
-  animation: slideIn 1.5s ease-in-out forwards;
-}
-.container_img-2 {
-  animation: slideUp 1.5s ease-in-out forwards;
-}
-.container_img-3 {
-  animation: slideUp 2s ease-in-out forwards;
+.slide-1 {
+  transform: translateY(1000px);
+  animation: slideUp 2s ease-in-out forwards .5s;
+  position: relative;
+    overflow: hidden;
 }
 
-.container_img-4 {
-  animation: slideIn 1.5s ease-in-out forwards;
+.slide-2 {
+    transform: translateY(1000px);
+    animation: slideUp 2s ease forwards 0.75s;
+    position: relative;
+    overflow: hidden;
 }
-.container_img-5 {
-  animation: slideIn 2.5s ease-in-out forwards;
+
+.slide-3 {
+  transform: translateY(1000px);
+  animation: slideUp 2s ease-in-out forwards 1s;
+  position: relative;
+    overflow: hidden;
 }
-.container_img-6 {
-  animation: slideIn 3s ease-in-out forwards;
+
+.slide-4 {
+  transform: translateY(1000px);
+  animation: slideUp 2s ease-in-out forwards 1.5s;
+  position: relative;
+    overflow: hidden;
+}
+
+.slide-5 {
+  transform: translateY(1000px);
+  animation: slideUp 2s ease-in-out forwards 1.75s;
+  position: relative;
+    overflow: hidden;
+}
+
+.fade_effect{
+  animation: blink 2s linear 1;
 }
 
 @keyframes blink{
 0%{opacity: 0.1;}
 50%{opacity: 0.5;}
-100%{opacity: 1;}
+100%{opacity: 1}
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
 }
 
 @keyframes slideUp {
@@ -159,14 +187,7 @@ const Layout2 = styled.div`
   }
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateX(500px) scale(.2);
-  }
-  100% {
-    transform: translateX(0px) scale(1);
-  }
-}
+
 
 `
 

@@ -30,7 +30,7 @@ function AboutMe(props) {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-md-4 text-center container_img">
+                        <div className="col-md-4 text-center fade_effect">
                             <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
                                 <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><DiCode /></small>
                             </IconContext.Provider>
@@ -42,7 +42,7 @@ function AboutMe(props) {
                                 I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve.
                                 </p>
                         </div>
-                        <div className="col-md-4 text-center container_img order-md-first">
+                        <div className="col-md-4 text-center fade_effect order-md-first">
                             <IconContext.Provider value={{ style: { fontSize: '200px', opacity: "1" } }}>
                                 <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineQuestion /></small>
                             </IconContext.Provider>
@@ -54,7 +54,7 @@ function AboutMe(props) {
                                 Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.
                                 </p>
                         </div>
-                        <div className="col-md-4 text-center container_img">
+                        <div className="col-md-4 text-center fade_effect">
                             <IconContext.Provider value={{ style: { fontSize: '175px', opacity: "1" } }}>
                                 <small className={`drop-shadow ${!props.checked ? 'text-yellow' : 'text-orange'}`}><AiOutlineTool /></small>
                             </IconContext.Provider>
@@ -80,29 +80,37 @@ const PageStyles = styled.div`
   height: auto;
 }
 
-.container_img {
-  width: 100%;
-  animation: slideIn 2s ease-in-out forwards;
+.fade_effect{
+  animation: blink 1.5s linear 1;
+}
+.fade_effect-2{
+  animation: blink 2.5s linear 1;
 }
 
 .slide-1 {
   transform: translateY(300px);
-  animation: slideUp .8s ease-in-out forwards .5s;
+  animation: slideUp 1.5s ease-in-out forwards .5s;
 }
 
 .slide-2 {
     transform: translateY(300px);
-    animation: slideUp .8s ease forwards 1s;
+    animation: slideUp 1.5s ease forwards 1s;
 }
 
 .slide-3 {
   transform: translateY(300px);
-  animation: slideUp .8s ease-in-out forwards 1.5s;
+  animation: slideUp 1.5s ease-in-out forwards 1.5s;
 }
 
 .slide-4 {
     transform: translateY(300px);
-    animation: slideUp .8s ease forwards 2s;
+    animation: slideUp 1.5s ease forwards 2s;
+}
+
+@keyframes blink{
+0%{opacity: 0.1;}
+50%{opacity: 0.5;}
+100%{opacity: 1}
 }
 
 @keyframes slideIn {
