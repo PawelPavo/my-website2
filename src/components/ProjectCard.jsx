@@ -57,9 +57,9 @@ const ProjectCard = (props) => {
                 </div>
                 <a
                     target="_blank" href={props.project.url} rel="noreferrer"
-                    className="text-center font-weight-light px-4 py-2 bg-gray icon slide-4"
+                    className="text-center px-4 py-2 bg-gray  slide-4 icon2"
                     style={{ position: "absolute", bottom: "0", right: "0", borderBottomRightRadius: "23px", borderTopLeftRadius: "23px" }}>
-                    <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1", filter: "drop-shadow(0.15rem 0.10rem 0.1rem rgba(0, 0, 0, 0.5))" } }}>
+                    <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1" } }}>
                         <small className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiEye /></small>
                     </IconContext.Provider>
                 </a>
@@ -102,7 +102,18 @@ const Layout2 = styled.div`
 
 .icon:hover {
     transform: scale(1.3);
-    filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(rgba(0, 0, 0, 0.5));
+    opacity: 1;
+}
+
+.icon2 {
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.icon2:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(rgb(255, 255, 255));
     opacity: 1;
 }
 
