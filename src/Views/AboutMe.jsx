@@ -7,7 +7,7 @@ import { DiCode } from "react-icons/di"
 function AboutMe(props) {
     return (
         <PageStyles>
-            <div className="min-vh-100 container mb-5" style={{ marginTop: "100px" }}>
+            <div className="min-vh-100 container mb-5">
                 <div className="row justify-content-center">
                     <TitleText>
                         <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>About Me</div>

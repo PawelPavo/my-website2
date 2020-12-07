@@ -79,7 +79,7 @@ function Projects({ checked }) {
                         <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
                     </TitleText>
                 </div>
-                <div className="row" style={{ marginTop: "150px" }}>
+                <div className="row mt-3">
                     {ProjectsArray.map(project => (
                         <div key={project.name} className="col-lg-4" >
                             <ProjectCard  project={project} checked={checked} />

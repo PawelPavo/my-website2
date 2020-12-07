@@ -3,9 +3,8 @@ import { GlobalStyles } from './utils/globalStyles'
 import { lightTheme, darkTheme } from './utils/themes';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
+import Navigation from './components/NavigationMobile';
 import NavigationDesktop from './components/NavigationDesktop';
-
 import Home from './Views/Home';
 import Projects from './Views/Projects';
 import Contact from './Views/Contact';
@@ -34,8 +33,8 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={!checked ? lightTheme : darkTheme} >
           <GlobalStyles />
-          {width < breakpoint ? <Navigation checked={checked} handleTheme={handleTheme} /> : <NavigationDesktop checked={checked} handleTheme={handleTheme}/>}
-          {/* <Navigation checked={checked} handleTheme={handleTheme} /> */}
+          {/* {width < breakpoint ? <Navigation checked={checked} handleTheme={handleTheme} /> : <NavigationDesktop checked={checked} handleTheme={handleTheme}/>} */}
+          <NavigationDesktop checked={checked} handleTheme={handleTheme} />
           <Switch>
             <Route exact path="/">
             </Route>

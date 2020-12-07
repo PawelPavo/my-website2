@@ -6,14 +6,14 @@ function Home(props) {
     return (
         <>
             <PageStyles>
-                <div className="container" style={{ marginTop: "100px" }}>
-                    <div className="row justify-content-center">
+                <div className="container">
+                    <div className="row justify-content-center mt-3">
                         <TitleText>
                             <div className={`d-none d-lg-block ${!props.checked ? 'text-off-white' : 'text-primary-light'}`}>Home</div>
                         </TitleText>
                     </div>
-                    <div className='container'>
-                        <div className="container_content">
+                    <div className="">
+                       <div className="container_content">
                             <div className="container_content_inner">
                                 <div className="title">
                                     <h1>Hello World</h1>
@@ -37,6 +37,7 @@ function Home(props) {
 }
 
 const PageStyles = styled.div`
+
 .container_outer_img {
   margin: 50px;
   width: 50%;

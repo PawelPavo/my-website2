@@ -2,9 +2,9 @@ import React from 'react';
 import ToggleSwitch from './ToggleSwitch';
 import GoogleFontLoader from 'react-google-font-loader';
 import { NavLink } from 'react-router-dom'
-import Burger from '../components/burger/Burger'
+import Burger from './burger/Burger'
 
-function Navigation({ checked, handleTheme }) {
+function NavigationMobile({ checked, handleTheme }) {
     const [open, setOpen] = React.useState(false);
 
         return (
@@ -52,4 +52,4 @@ function Navigation({ checked, handleTheme }) {
         );
     }
 
-    export default Navigation;
+    export default NavigationMobile;
