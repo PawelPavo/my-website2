@@ -6,7 +6,7 @@ const ProjectsArray = [
     {
         id: 1,
         name: "XoloBooks",
-        description: "A bookstore build with wix and suctom JavaScript which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content. It is deployed with wix.",
+        description: "A bookstore build with wix and custom JavaScript which includes full checkout, book inventory, as well as search bar. This project is build with customers directions and content. It is deployed with wix.",
         url: "https://www.xolobooks.com/",
         git: "https://github.com/PawelPavo",
         images: [{ source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png' }]
