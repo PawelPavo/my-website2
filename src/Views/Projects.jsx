@@ -74,15 +74,13 @@ function Projects({ checked }) {
     return (
         <>
             <div className="container mt-5">
-                <div className="row justify-content-center">
-                    <TitleText>
-                        <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
-                    </TitleText>
-                </div>
+                <TitleText>
+                    <div className={` d-none d-lg-block ${!checked ? 'text-white' : 'text-primary-light'}`}>Projects</div>
+                </TitleText>
                 <div className="row mt-3">
                     {ProjectsArray.map(project => (
                         <div key={project.name} className="col-lg-4" >
-                            <ProjectCard  project={project} checked={checked} />
+                            <ProjectCard project={project} checked={checked} />
                         </div>
                     ))}
                 </div>

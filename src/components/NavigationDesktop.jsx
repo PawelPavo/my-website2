@@ -18,14 +18,14 @@ function Navigation({ checked, handleTheme }) {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <nav className={`navbar navbar-expand-lg navbar-light sticky-top py-4 ${!checked ? 'bg-off-white' : 'bg-primary'}`}>
+            <nav className={`navbar navbar-expand-lg navbar-light sticky-top py-4 px-5 ${!checked ? 'bg-off-white' : 'bg-primary'}`}>
                 {/* <NavLink className="navbar-brand" to="/">
                     <img className=""
                     src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}
                     alt="Pawel_Jaskolski" style={{ height: "65px", width: "auto" }} />
                 </NavLink> */}
                 <div className="">
-                    <ToggleSwitch checked={checked} handleTheme={handleTheme} id="test" />
+                    <ToggleSwitch checked={checked} handleTheme={handleTheme} id="test" className=""/>
                     <Burger className="" open={open} setOpen={setOpen} checked={checked} />
                 </div>
                 <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -34,7 +34,7 @@ function Navigation({ checked, handleTheme }) {
                             {/* <li className="nav-item ">
                             <NavLink className={`nav-link nav-text mx-5 ${!checked ? '' : 'text-light'}`} to="/">Home</NavLink>
                         </li> */}
-                            <li className="nav-item ">
+                            <li className="nav-item active">
                                 <NavLink className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item">

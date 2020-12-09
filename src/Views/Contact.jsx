@@ -14,7 +14,7 @@ function Home({ checked }) {
             <PageStyle>
                 <div className="container ">
                     <TitleText>
-                        <div className={` d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Contact</div>
+                        <div className={` d-none d-lg-block ${!checked ? 'text-white' : 'text-primary-light'}`}>Contact</div>
                     </TitleText>
                     <div className="container">
                         <div className="row d-flex justify-content-center align-items-center">
@@ -29,17 +29,18 @@ function Home({ checked }) {
                                     </div>
                                     <div className="card-body custom_effects">
                                         <h5 className="slide-1 card-title">Fort Lauderdale, FL</h5>
-                                        <h6 className={`slide-2 ${!checked ? 'text-muted' : ''}`}>Want to connect about a project or just to chat... let me know.</h6>
+                                        <h6 className={` slide-2 ${!checked ? 'text-muted' : ''}`}>Want to connect about a project or just to chat... let me know.</h6>
                                     </div>
+                                    <hr class="my-4"/>
                                     <IconContext.Provider value={{ style: { fontSize: '30px', opacity: "1" } }}>
-                                        <div className="row justify-content-center border border-bottom-0 border-left-0 border-right-0 py-3">
-                                            <h2 className="mr-5 icon slide-1">
+                                        <div className="row justify-content-center">
+                                            <h2 className="col icon slide-1">
                                                 <a href="https://www.instagram.com/pifpavchio/" rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiInstagram /></a>
                                             </h2>
-                                            <h2 className="mx-5 icon slide-2">
+                                            <h2 className="col icon slide-2">
                                                 <a href="mailto:pjpavo@gmail.com?subject=I found your website and now..." rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><FiMail /></a>
                                             </h2>
-                                            <h2 className="ml-5 icon slide-3">
+                                            <h2 className="col icon slide-3">
                                                 <a href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/" rel="noreferrer" target="_blank" className={`drop-shadow-2 ${!checked ? 'text-primary' : 'text-orange'}`}><AiOutlineLinkedin /></a>
                                             </h2>
                                         </div>

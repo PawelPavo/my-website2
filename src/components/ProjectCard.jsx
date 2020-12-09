@@ -33,14 +33,14 @@ const ProjectCard = (props) => {
             <div className={`fade_effect  custom-height card mb-5 rouded-0 mx-autp ${!props.checked ? 'border-off-white bg-off-white card-hover ' : "bg-primary-light card-hover-dark"}`}
                 style={{ borderTopLeftRadius: "25px", borderBottomRightRadius: "25px", borderTopRightRadius: "0", borderBottomLeftRadius: "0", position: "relative" }}>                    
                 <div className="card-body" >
-                    <div className="row justify-content-center">
-                        <h4 className="mr-4 icon">
+                    <div className="row text-center">
+                        <h4 className=" col mr-4 icon">
                             <a href={props.project.git} rel="noreferrer" target="_blank" className={` ${!props.checked ? 'text-yellow' : 'text-orange'}`} ><FiGithub /></a>
                         </h4>
-                        <h4 className="mx-4 icon">
+                        <h4 className="col mx-4 icon">
                             <div onClick={toggleModal} className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FiCamera /></div>
                         </h4>
-                        <h4 className="ml-4 icon">
+                        <h4 className="col ml-4 icon">
                             <div className={`${!props.checked ? 'text-yellow' : 'text-orange'}`}><FaTools /></div>
                         </h4>
                     </div>
