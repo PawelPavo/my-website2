@@ -18,7 +18,7 @@ function Navigation({ checked, handleTheme }) {
                 ]}
                 subsets={['cyrillic-ext', 'greek']}
             />
-            <nav className={`navbar navbar-expand-lg navbar-light sticky-top py-4 ${!checked ? 'bg-white' : 'bg-primary'}`}>
+            <nav className={`navbar navbar-expand-lg navbar-light sticky-top py-4 ${!checked ? 'bg-off-white' : 'bg-primary'}`}>
                 {/* <NavLink className="navbar-brand" to="/">
                     <img className=""
                     src={!checked ? `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png"}` : `${"https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png"}`}

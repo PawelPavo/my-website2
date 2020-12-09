@@ -73,7 +73,7 @@ const ProjectsArray = [
 function Projects({ checked }) {
     return (
         <>
-            <div className="container">
+            <div className="container mt-5">
                 <div className="row justify-content-center">
                     <TitleText>
                         <div className={`d-none d-lg-block ${!checked ? 'text-off-white' : 'text-primary-light'}`}>Projects</div>
