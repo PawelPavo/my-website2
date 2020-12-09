@@ -26,11 +26,11 @@ function Navigation({ checked, handleTheme }) {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <div className="row px-4 py-3" >
-                    <div className="col my-auto">
+                <div className="row justify-content-between pt-3 px-4" >
+                    <div className="col-auto my-auto">
                         <ToggleSwitch checked={checked} handleTheme={handleTheme} />
                     </div>
-                    <div className="col my-auto text-end openbtn"
+                    <div className="col-auto text-end openbtn"
                         style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}><CgMenuRight /> open
                     </div>
                 </div>
@@ -95,7 +95,9 @@ const NavLayout = styled.div`
 .closebtn:hover {
     opacity: 0.60;
 }
+
 .openbtn {
+    filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.5));
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }

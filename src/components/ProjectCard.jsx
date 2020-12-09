@@ -8,6 +8,7 @@ import { BsArrowRight  } from "react-icons/bs"
 
 
 const ProjectCard = (props) => {
+
     const [show2, setShow2] = React.useState(false);
     const [modalOpen, setModalOpen] = React.useState(false)
 
@@ -41,7 +42,7 @@ const ProjectCard = (props) => {
                             <p>
                                 {props.project.description.substring(0, 60)}...
                             </p>
-                            <h1 className={`ml-3 ${!props.checked ? 'text-primary arrow-icon ' : 'text-off-white arrow-icon-dark'}`} ><BsArrowRight/></h1>
+                            <h1 className={`icon  ml-3 ${!props.checked ? 'text-primary arrow-icon ' : 'text-off-white arrow-icon-dark'}`} ><BsArrowRight/></h1>
                         </div>
                         <div className={`showContent ${show2 ? 'showContent showContent-active' : ''}`}>
                             <p className={`${!props.checked ? 'text-muted' : 'text-off-white'}`}>{props.project.description}</p>
@@ -50,10 +51,10 @@ const ProjectCard = (props) => {
                 </div>
                 <a
                     target="_blank" href={props.project.url} rel="noreferrer"
-                    className="text-center px-4 py-2 bg-gray icon2"
+                    className="text-center px-4 py-2 bg-gray arrow-icon"
                     style={{ position: "absolute", bottom: "0", right: "0", borderBottomRightRadius: "23px", borderTopLeftRadius: "23px" }}>
                     <IconContext.Provider value={{ style: { fontSize: '20px', opacity: "1" } }}>
-                        <small className={`${!props.checked ? 'text-white' : 'text-primary'}`}><FiEye /></small>
+                        <small className={`icon ${!props.checked ? 'text-primary ' : 'text-white'}`}><FiEye /></small>
                     </IconContext.Provider>
                 </a>
             </div>
@@ -99,6 +100,7 @@ const Layout2 = styled.div`
 }
 
 .icon {
+    filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.3));
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
@@ -174,6 +176,15 @@ const Layout2 = styled.div`
 0%{opacity: 0.1;}
 50%{opacity: 0.5;}
 100%{opacity: 1}
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 `
