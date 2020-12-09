@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IconContext } from "react-icons"
-import { AiOutlineQuestion, AiOutlineTool } from "react-icons/ai"
-import { DiCode } from "react-icons/di"
+
 
 function AboutMe(props) {
   return (

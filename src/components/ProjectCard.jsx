@@ -8,15 +8,6 @@ import { BsArrowRight  } from "react-icons/bs"
 
 
 const ProjectCard = (props) => {
-
-    // const handleTechUsed = () => {
-    //     var node_list, techClass_list;
-    //     node_list = document.querySelectorAll(`.${props.project.tech}`);
-    //     for (techClass_list = 0; techClass_list < node_list.length; techClass_list++) {
-    //         node_list[techClass_list].classList.toggle("newStyle");
-    //     }
-    // }
-    // const images = [{ source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesOpen2.png' }, { source: 'https://news-api.s3.us-east-2.amazonaws.com/MeEyesClosed2.png' }];
     const [show2, setShow2] = React.useState(false);
     const [modalOpen, setModalOpen] = React.useState(false)
 
@@ -184,26 +175,6 @@ const Layout2 = styled.div`
 50%{opacity: 0.5;}
 100%{opacity: 1}
 }
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(500px) scale(.2);
-  }
-  100% {
-    transform: translateX(0px) scale(1);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(1000px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-
 
 `
 
