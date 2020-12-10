@@ -4,35 +4,38 @@ import Left from '../components/aboutUsComp/Left';
 import Up from '../components/aboutUsComp/Up';
 import Right from '../components/aboutUsComp/Right';
 import Down from '../components/aboutUsComp/Down';
+import DownPage from '../components/aboutUsComp/DownPage';
 
 
 function AboutMe({ checked }) {
   return (
     <>
-      <div className="container ">
+      <div className="container min-vh-100">
         <TitleText>
-          <div className={` d-none d-lg-block ${!checked ? 'text-white' : 'text-primary-light'}`}>About Me</div>
+          <div className={` row d-none d-lg-block ${!checked ? 'text-white' : 'text-primary-light'}`}>About Me</div>
         </TitleText>
         <Middle>
-          <div id="" className="container" >
-            <div className="row-board mt-5">
-              <div className="top left"></div>
-              <div className="top middle"><Up checked={checked}/> </div>
-              <div className="top right"></div>
-            </div>
-            <div className="row-board">
-              <div className="center left"><Left checked={checked} /></div>
-              <div className="center middle"></div>
-              <div className="center right"><Right checked={checked}/></div>
-            </div>
-            <div className="row-board">
-              <div className="bottom left"></div>
-              <div className="bottom middle"><Down checked={checked}/></div>
-              <div className="bottom right"></div>
+          <div id="about" className="min-vh-100 d-flex justify-content-center align-items-center" style={{marginTop:"-25px"}}>
+            <div className="row justify-content-center">
+              <div className="col-auto">
+                <div className="box"><Up checked={checked} /> </div>
+              </div>
+              <div className="row justify-content-around">
+                <div className="col-auto ml-5">
+                  <div className="box"><Left checked={checked} /></div>
+                </div>
+                <div className="col-auto">
+                  <div className="box"><Right checked={checked} /></div>
+                </div>
+              </div>
+              <div className="col-auto">
+                <div className="box"><Down checked={checked} /></div>
+              </div>
             </div>
           </div>
         </Middle>
       </div>
+      <DownPage checked={checked} />
     </>
   );
 }
@@ -51,24 +54,9 @@ letter-spacing: 2px;
 `
 
 const Middle = styled.div`
-#board {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* all 9 cells */
-.row-board > div {
-  float: left;
+.box {
     height: 100px;
     width: 100px;
-    font-size: 75px;
-}
-
-.row-board {
-  clear: both;
-  margin: 0 auto;
-  width: 302px;
 }
 
 `

@@ -26,7 +26,7 @@ function Navigation({ checked, handleTheme }) {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <div className="row justify-content-between pt-3 px-4" >
+                <div id="navBar" className="row justify-content-between pt-3 px-4" >
                     <div className="col-auto my-auto">
                         <ToggleSwitch checked={checked} handleTheme={handleTheme} />
                     </div>

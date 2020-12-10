@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { CgClose } from "react-icons/cg"
+import CodeBar from '../CodeBar';
 
 function openNav() {
     document.getElementById("right").style.width = "100%";
@@ -16,13 +17,16 @@ function Right({ checked }) {
             <div onClick={openNav} className={`${!checked ? 'text-yellow openbtn-light' : 'text-orange openbtn-dark'}`}>
                 <div className="chevron">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 3.5l7 7-7 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 5l7 7-7 7" />
                     </svg>
                 </div>
             </div>
             <div id="right" className="overlay">
                 <div className="closebtn text-white" onClick={closeNav}><CgClose /> close</div>
                 <div className={`p-5 overlay-content-Right ${!checked ? 'overlay-content-Right text-off-white' : 'overlay-content-Right text-orange'}`} style={{ fontFamily: "Ubuntu" }}>
+                    <div className="row mb-3">
+                        <CodeBar />
+                    </div>
                     <p>Tech I am currently using includes:</p>
                     <ul>
                         <li>JavaScript</li>

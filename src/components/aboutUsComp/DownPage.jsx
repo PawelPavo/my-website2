@@ -1,35 +1,41 @@
-import React from 'react'
+import * as React from 'react';
 import styled from 'styled-components';
 
-
-function Down({ checked }) {
+const BioView = ({ checked }) => {
 
     return (
         <>
-            <DownStyles>
-                <div className={`${!checked ? 'text-yellow openbtn-light' : 'text-orange openbtn-dark'}`}>
-                    <div className="chevron">
-                        <a href="#downPage" className={`${!checked ? 'text-yellow' : 'text-orange'}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </a>
+            <MainText>
+                <div id="downPage" className="row min-vh-100 d-flex justify-content-center align-items-center bg-light shadow-lg">
+                    <div className={`box ${!checked ? 'text-yellow openbtn-light' : 'text-orange openbtn-dark'}`}>
+                        <div className="chevron">
+                            <a href="#navBar" className={`${!checked ? 'text-yellow' : 'text-orange'}`}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 18l8-8 8 8" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="up" className="">
                     </div>
                 </div>
-                <div id="down" className="">
-
-                </div>
-            </DownStyles>
+            </MainText>
         </>
     )
-
 }
 
-const DownStyles = styled.div`
+const MainText = styled.div`
+
 a {
     text-decoration: none;
 }
-//LIGHT Buttom
+
+.box {
+    height: 115px;
+    width: 115px;
+}
+
+
 .openbtn-light {
     border-radius: 80px;
     background: linear-gradient(145deg, #fdffff, #d4d7dc);
@@ -75,4 +81,4 @@ a {
 
 `
 
-export default Down;
+export default BioView;
