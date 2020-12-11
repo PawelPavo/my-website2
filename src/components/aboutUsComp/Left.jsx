@@ -21,8 +21,8 @@ function Left({ checked }) {
                 </div>
             </div>
             <div id="left" className="overlay">
-                <div className="closebtn text-white" onClick={closeNav}><CgClose /> close</div>
-                <div className={`p-5 overlay-content-left ${!checked ? 'overlay-content-left text-off-white' : 'overlay-content-left text-orange'}`} style={{ fontFamily: "Ubuntu" }}>
+                <div className="closebtn text-off-white" onClick={closeNav}><CgClose /> close</div>
+                <div className={`p-5 overlay-content-left ${!checked ? 'overlay-content-left text-off-white' : 'overlay-content-left text-yellow'}`} style={{ fontFamily: "Ubuntu" }}>
                     Hello, My name is Pawel and I am a software developer with a background in healthcare administration. I am originally from Poland but immigrated to the US when I was 10 years old and lived in cities such as New York, West Palm Beach and Fort Lauderdale.
                 </div>
             </div>
@@ -39,8 +39,8 @@ const LeftStyles = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(74,124,172);
+  background-color: rgba(74,124,172, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }

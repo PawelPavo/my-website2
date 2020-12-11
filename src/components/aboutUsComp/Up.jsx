@@ -25,7 +25,7 @@ function Up({ checked }) {
                 </div>
                 <div id="up" className="overlay">
                     <div className="closebtn text-white" onClick={closeNav}><CgClose /> close</div>
-                    <div className={`p-5 overlay-content-Right ${!checked ? 'overlay-content-Right text-off-white' : 'overlay-content-Right text-orange'}`} style={{ fontFamily: "Ubuntu" }}>
+                    <div className={`p-5 overlay-content-Right ${!checked ? 'overlay-content-Right text-off-white' : 'overlay-content-Right text-yellow'}`} style={{ fontFamily: "Ubuntu" }}>
                         <p>In my free time, I enjoy researching and investing in the stock market, while maybe sipping on a Jai Alai, my favorite beer. And in the background, I’ll have a soccer match playing. I also enjoy going out to different restaurants trying to find the best fried calamari with my girlfriend, who created my awesome avatar … by the way!</p>
                     </div>
                 </div>
@@ -43,8 +43,8 @@ const UpStyles = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(141,86,213);
+  background-color: rgba(141,86,213, 0.9);
   overflow-y: hidden;
   transition: 0.5s;
 }

@@ -59,8 +59,8 @@ const RightStyles = styled.div`
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(32,32,76);
+  background-color: rgba(32,32,76, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }

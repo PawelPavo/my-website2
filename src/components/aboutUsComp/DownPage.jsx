@@ -6,7 +6,7 @@ const BioView = ({ checked }) => {
     return (
         <>
             <MainText>
-                <div id="downPage" className="row min-vh-100 d-flex justify-content-center align-items-center bg-light shadow-lg">
+                <div id="downPage" className="row min-vh-100 d-flex justify-content-center align-items-center bg-red shadow-lg" style={{ backgroundColor: "#721c28" }}>
                     <div className={`box ${!checked ? 'text-yellow openbtn-light' : 'text-orange openbtn-dark'}`}>
                         <div className="chevron">
                             <a href="#navBar" className={`${!checked ? 'text-yellow' : 'text-orange'}`}>
@@ -16,7 +16,12 @@ const BioView = ({ checked }) => {
                             </a>
                         </div>
                     </div>
-                    <div id="up" className="">
+                    <div id="up" className="row justify-content-center">
+                        <div className={`col-md-8 text-justify ${checked ? 'text-white' : 'text-yellow'}`}>
+                            <p >
+                                I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve. Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </MainText>
@@ -25,6 +30,9 @@ const BioView = ({ checked }) => {
 }
 
 const MainText = styled.div`
+p {
+    text-align: justify;
+}
 
 a {
     text-decoration: none;

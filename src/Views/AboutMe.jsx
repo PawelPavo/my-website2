@@ -21,7 +21,7 @@ function AboutMe({ checked }) {
                 <div className="box"><Up checked={checked} /> </div>
               </div>
               <div className="row justify-content-around">
-                <div className="col-auto ml-5">
+                <div className="col-auto">
                   <div className="box"><Left checked={checked} /></div>
                 </div>
                 <div className="col-auto">
