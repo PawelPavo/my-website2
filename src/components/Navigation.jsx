@@ -37,10 +37,10 @@ function Navigation({ checked, handleTheme }) {
                 <div id="myNav" className="overlay">
                     <div className="closebtn text-white" onClick={closeNav}><CgClose/> close</div>
                     <div className="overlay-content" style={{ fontFamily: "Ubuntu" }}>
-                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to='/home'>Home</NavLink>
-                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="projects"> Projects</NavLink>
+                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to={process.env.PUBLIC_URL + '#/my-website2/home'}>Home</NavLink>
+                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to={process.env.PUBLIC_URL  + '#/my-website2/projects'}>Projects</NavLink>
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="/about">About Me</NavLink>
-                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="#/my-website2">Contact</NavLink>
+                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="/contact">Contact</NavLink>
                     </div>
                 </div>
             </NavLayout>
