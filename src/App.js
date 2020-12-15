@@ -17,24 +17,23 @@ function App() {
   }
 
   return (
-    <>
       <HashRouter>
         <ThemeProvider theme={!checked ? lightTheme : darkTheme} >
           <GlobalStyles />
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
-            <Route exact path={process.env.PUBLIC_URL + "/"}>
+            <Route exact path={process.env.PUBLIC_URL + '/'}>
             </Route>
-            <Route exact path={process.env.PUBLIC_URL + "/home"}>
+            <Route exact path={process.env.PUBLIC_URL + '/home'}>
               <Home checked={checked} />
             </Route>
-            <Route exact path={process.env.PUBLIC_URL + "/projects"}>
+            <Route exact path={process.env.PUBLIC_URL + '/projects'}>
               <Projects checked={checked} />
             </Route>
-            <Route exact path={process.env.PUBLIC_URL + "/about"}>
+            <Route exact path={process.env.PUBLIC_URL + '/about'}>
               <AboutMe checked={checked} />
             </Route>
-            <Route exact path={process.env.PUBLIC_URL + "/contact"}>
+            <Route exact path={process.env.PUBLIC_URL + '/contact'}>
               <Contact checked={checked} />
             </Route>
           </Switch>
@@ -43,7 +42,6 @@ function App() {
           </Route>
         </ThemeProvider>
       </HashRouter>
-    </>
   );
 }
 
