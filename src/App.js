@@ -2,7 +2,7 @@ import React from 'react';
 import { GlobalStyles } from './utils/globalStyles'
 import { lightTheme, darkTheme } from './utils/themes';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Views/Home';
 import Projects from './Views/Projects';
 import Contact from './Views/Contact';
@@ -18,28 +18,31 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <ThemeProvider theme={!checked ? lightTheme : darkTheme} >
           <GlobalStyles />
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
-            <Route exact path="/">
+            <Route exact path={process.env.PUBLIC_URL + "/"}>
             </Route>
-            <Route exact path="/home">
+            <Route exact path={process.env.PUBLIC_URL + "/home"}>
               <Home checked={checked} />
             </Route>
-            <Route exact path="/projects">
+            <Route exact path={process.env.PUBLIC_URL + "/projects"}>
               <Projects checked={checked} />
             </Route>
-            <Route exact path="/about">
+            <Route exact path={process.env.PUBLIC_URL + "/about"}>
               <AboutMe checked={checked} />
             </Route>
-            <Route exact path="/contact">
+            <Route exact path={process.env.PUBLIC_URL + "/contact"}>
               <Contact checked={checked} />
             </Route>
           </Switch>
+          <Route path="*">
+            <Home checked={checked} />
+          </Route>
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
