@@ -1,6 +1,6 @@
 {
   "name": "my_site3",
-  "homepage": "https://pawelpavo.github.io/my-website2/.",
+  "homepage": "https://pawelpavo.github.io/my-website2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
