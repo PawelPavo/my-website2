@@ -40,7 +40,7 @@ function Navigation({ checked, handleTheme }) {
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to='/home'>Home</NavLink>
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="projects"> Projects</NavLink>
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="/about">About Me</NavLink>
-                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="/contact">Contact</NavLink>
+                        <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to="#/my-website2">Contact</NavLink>
                     </div>
                 </div>
             </NavLayout>
