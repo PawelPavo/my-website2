@@ -9,7 +9,7 @@ function Down({ checked }) {
             <DownStyles>
                 <div className={`${!checked ? 'text-yellow openbtn-light' : 'text-orange openbtn-dark'}`}>
                     <div className="chevron">
-                        <a href={process.env.PUBLIC_URL + '#/my-website2/downPage'} className={`${!checked ? 'text-yellow' : 'text-orange'}`}>
+                        <a href={process.env.PUBLIC_URL + '#/my-website2/home'} className={`${!checked ? 'text-yellow' : 'text-orange'}`}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
                             </svg>

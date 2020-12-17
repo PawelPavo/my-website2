@@ -37,9 +37,6 @@ function App() {
               <Contact checked={checked} />
             </Route>
           </Switch>
-          <Route path="*">
-            <Home checked={checked} />
-          </Route>
         </ThemeProvider>
       </HashRouter>
   );
