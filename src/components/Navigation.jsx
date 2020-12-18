@@ -7,10 +7,10 @@ import { CgMenuRight, CgClose } from "react-icons/cg"
 
 
 function openNav() {
-    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
 }
 function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.height = "0%";
 }
 
 function Navigation({ checked, handleTheme }) {
@@ -26,16 +26,15 @@ function Navigation({ checked, handleTheme }) {
                     ]}
                     subsets={['cyrillic-ext', 'greek']}
                 />
-                <div id="navBar" className="row justify-content-between pt-3 px-4" >
-                    <div className="col-auto my-auto">
+                <div id="navBar" className="row justify-content-between pt-3 px-4 fixed-top" >
+                    {/* <div className="col-auto my-auto">
                         <ToggleSwitch checked={checked} handleTheme={handleTheme} />
-                    </div>
+                    </div> */}
                     <div className="col-auto text-end openbtn"
                         style={{ fontSize: "30px", cursor: "pointer" }} onClick={openNav}><CgMenuRight /> open
                     </div>
                 </div>
                 <div id="myNav" className="overlay">
-                    <div className="closebtn text-white" onClick={closeNav}><CgClose/> close</div>
                     <div className="overlay-content" style={{ fontFamily: "Ubuntu" }}>
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to={process.env.PUBLIC_URL + '/home'}>Home</NavLink>
                         <NavLink onClick={closeNav} className={` left nav-link nav-text mx-5 ${!checked ? 'menu-underline2' : 'text-light menu-underline'}`} to={process.env.PUBLIC_URL  + '/projects'}>Projects</NavLink>
@@ -50,8 +49,8 @@ function Navigation({ checked, handleTheme }) {
 
 const NavLayout = styled.div`
 .overlay {
-  height: 100%;
-  width: 0;
+  height: 0;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -97,13 +96,14 @@ const NavLayout = styled.div`
 }
 
 .openbtn {
-    filter: drop-shadow(0.15rem 0.15rem 0.1rem rgba(0, 0, 0, 0.5));
+    color: white;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
 
 .openbtn:hover {
-    opacity: 0.60;
+    opacity: 0.90;
+    color: #E36C4E;
 }
 
 @media screen and (max-height: 450px) {

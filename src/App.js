@@ -3,6 +3,7 @@ import { GlobalStyles } from './utils/globalStyles'
 import { lightTheme, darkTheme } from './utils/themes';
 import { ThemeProvider } from 'styled-components';
 import { HashRouter, BrowserRouter, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute'
 import Home from './Views/Home';
 import Projects from './Views/Projects';
 import Contact from './Views/Contact';
@@ -22,20 +23,20 @@ function App() {
           <GlobalStyles />
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
-            <Route exact path={process.env.PUBLIC_URL + '/'}>
-            </Route>
-            <Route exact path={process.env.PUBLIC_URL + '/home'}>
+            <PrivateRoute exact path={process.env.PUBLIC_URL + '/'}>
+            </PrivateRoute>
+            <PrivateRoute exact path={process.env.PUBLIC_URL + '/home'}>
               <Home checked={checked} />
-            </Route>
-            <Route exact path={process.env.PUBLIC_URL + '/projects'}>
+            </PrivateRoute>
+            <PrivateRoute exact path={process.env.PUBLIC_URL + '/projects'}>
               <Projects checked={checked} />
-            </Route>
-            <Route exact path={process.env.PUBLIC_URL + '/about'}>
+            </PrivateRoute>
+            <PrivateRoute exact path={process.env.PUBLIC_URL + '/about'}>
               <AboutMe checked={checked} />
-            </Route>
-            <Route exact path={process.env.PUBLIC_URL + '/contact'}>
+            </PrivateRoute>
+            <PrivateRoute exact path={process.env.PUBLIC_URL + '/contact'}>
               <Contact checked={checked} />
-            </Route>
+            </PrivateRoute>
           </Switch>
         </ThemeProvider>
       </HashRouter>
