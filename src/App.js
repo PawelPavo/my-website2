@@ -24,8 +24,6 @@ function App() {
           <Navigation checked={checked} handleTheme={handleTheme} />
           <Switch>
             <PrivateRoute exact path={process.env.PUBLIC_URL + '/'}>
-            </PrivateRoute>
-            <PrivateRoute exact path={process.env.PUBLIC_URL + '/home'}>
               <Home checked={checked} />
             </PrivateRoute>
             <PrivateRoute exact path={process.env.PUBLIC_URL + '/projects'}>
